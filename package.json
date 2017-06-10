@@ -11,7 +11,8 @@
     "start": "au run --watch",
     "test": "au test --env dev --watch",
     "build": "au build --env dev",
-    "dist": "au build --env prod"
+    "dist": "au build --env prod && rm -rf dist && mkdir dist && cp index.html dist && cp -r scripts dist && rm dist/scripts/app-bundle.js.map",
+    "upload": "cd ../aurelia-bootstrap-ux && cp -r ../aurelia-bootstrap-ux-showcase/dist/* docs && git add docs && git commit -m 'Upload docs' && git push origin master"
   },
   "dependencies": {
     "aurelia-bootstrap-ux": "^0.1.0",
