@@ -87,6 +87,14 @@
               </div>
             </div>
             <div bs-well bs-button-toolbar>
+              <div class="btn-group" data-toggle="buttons">
+                <bs-button repeat.for="ch of checkedArray" type="primary" toggle="true" active.bind="ch" click.trigger="ch = !ch">
+                  <bs-icon icon="${ch ? 'check' : 'unchecked'}"></bs-icon>
+                  ${ch ? 'On' : 'Off'}
+                </bs-button>
+              </div>
+            </div>
+            <div bs-well bs-button-toolbar>
               <bs-button size="lg" type="default" click.trigger="onClick()">Large</bs-button>
               <bs-button size="md" type="default" click.trigger="onClick()">Medium</bs-button>
               <bs-button size="sm" type="default" click.trigger="onClick()">Small</bs-button>
@@ -94,21 +102,12 @@
             </div>
             <div bs-well bs-button-toolbar>
               <bs-button type="default" icon="minus-sign" click.trigger="onClick()">Default</bs-button>
-              <bs-button type="primary" icon="plus-sign" click.trigger="onClick()">Primary</bs-button>
+              <bs-button type="primary" icon="plus-sign" icon-pos="right" click.trigger="onClick()">Primary</bs-button>
               <bs-button type="success" icon="ok-sign" click.trigger="onClick()">Success</bs-button>
               <bs-button type="info" icon="info-sign" click.trigger="onClick()">Info</bs-button>
               <bs-button type="warning" icon="exclamation-sign" click.trigger="onClick()">Warning</bs-button>
               <bs-button type="danger" icon="remove-sign" click.trigger="onClick()">Danger</bs-button>
               <bs-button type="link" icon="link" click.trigger="onClick()">Link</bs-button>
-            </div>
-            <div bs-well bs-button-toolbar>
-              <bs-button type="default" icon="minus-sign" icon-pos="right" click.trigger="onClick()">Default</bs-button>
-              <bs-button type="primary" icon="plus-sign" icon-pos="right" click.trigger="onClick()">Primary</bs-button>
-              <bs-button type="success" icon="ok-sign" icon-pos="right" click.trigger="onClick()">Success</bs-button>
-              <bs-button type="info" icon="info-sign" icon-pos="right" click.trigger="onClick()">Info</bs-button>
-              <bs-button type="warning" icon="exclamation-sign" icon-pos="right" click.trigger="onClick()">Warning</bs-button>
-              <bs-button type="danger" icon="remove-sign" icon-pos="right" click.trigger="onClick()">Danger</bs-button>
-              <bs-button type="link" icon="link" icon-pos="right" click.trigger="onClick()">Link</bs-button>
             </div>
             <div bs-well bs-button-toolbar>
               <div bs-button-group>
